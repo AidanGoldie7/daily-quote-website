@@ -11,6 +11,8 @@
 body{
     background: #bbc6fa;
 }
+
+
 .quote-box{
     background: #fff;
     width: 700px;
@@ -24,7 +26,33 @@ body{
     box-shadow: 0 10px 20px 0px rgba(0,0,0,0.15);
 }
 
+/*title*/
 .quote-box h2{
     font-size: 32px;
     margin-bottom: 40px;
+    position:relative;
+}
+
+/*line under title*/
+.quote-box h2::after{
+    content: '';
+    width: 75px;
+    height: 3px;
+    border-radius: 3px;
+    background: rgb(23, 124, 229);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.quote-box blockquote{
+    font-size: 26px;
+    min-height: 110px;
+}
+
+/*add quotation marks before and after the quote*/
+.quote-box blockquote::before, .quote-box blockquote::after{
+    content: '"';
 }
