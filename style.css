@@ -103,3 +103,9 @@ body{
     background: transparent;
     color: #333;
 }
+
+/*the second button icon*/
+.quote-box button:nth-child(2) i{
+    color: rgb(0, 140, 255);
+    padding-right: 5px;
+}
