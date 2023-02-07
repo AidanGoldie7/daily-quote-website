@@ -9,10 +9,10 @@
     font-family: 'Rajdhani', sans-serif;
 }
 body{
-    background: #bbc6fa;
+    background: #00aeff;
 }
 
-
+/*quote boxing center of page*/
 .quote-box{
     background: #fff;
     width: 700px;
@@ -77,6 +77,7 @@ body{
 }
 
 
+/*button div*/
 .quote-box div{
     width: 100%;
     margin-top: 50px;
@@ -84,7 +85,9 @@ body{
     justify-content: center;
 }
 
+/*button styling*/
 .quote-box button{
+    font-size: 16px;
     background: rgb(23, 124, 229);
     color: #fff;
     border-radius: 25px;
