@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;900&family=Mukta:wght@200;400&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Mukta', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+}
+body{
+    background: #bbc6fa;
+}
+.quote-box{
+    background: #fff;
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0,0,0,0.15);
+}
+
+.quote-box h2{
+    font-size: 32px;
+    margin-bottom: 40px;
+}
