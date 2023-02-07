@@ -19,7 +19,8 @@
         <div>
             <!--when this button is clicked a new quote is displayed-->
             <button onclick="getquote(api_url)">New Quote</button>
-            <button><i class="fa-brands fa-twitter"></i>Tweet</button>
+
+            <button onclick="tweet()"><i class="fa-brands fa-twitter"></i>Tweet</button>
         </div>
     </div>
 
@@ -59,6 +60,17 @@
 
         //this function is used to get the randomly generated quote from the above function
         getquote(api_url);
+
+
+
+
+        //function to share quote in a tweet
+        function tweet(){
+            window.open(href="https://twitter.com/intent/tweet?text=" + quote.innerHTML + "   - " + author.innerHTML, 
+            "Tweet Window", 
+            "width=600", 
+            "height=300")
+        }
 
     </script>
     
