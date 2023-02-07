@@ -12,20 +12,54 @@
     <div class="quote-box">
         <h2>Quote of the day</h2>
         <!--the quote-->
-        <blockquote>Loading...</blockquote>
+        <blockquote id="dailyQuote">Loading...</blockquote>
         <!--the author-->
-        <span>Loading...</span>
+        <span id="dailyAuthor">Loading...</span>
 
         <div>
-            <button>New Quote</button>
+            <!--when this button is clicked a new quote is displayed-->
+            <button onclick="getquote(api_url)">New Quote</button>
             <button><i class="fa-brands fa-twitter"></i>Tweet</button>
         </div>
     </div>
 
 
-    <script>
 
-        const api_url = 
+
+
+
+    <!--get quote from quote API and assign it to the above text displays blockquote and span-->
+    <script>
+        //setting the quote from console as the blockquote text
+        const quote = document.getElementById("dailyQuote")
+        //setting the author from console as the span text
+        const author = document.getElementById("dailyAuthor")
+        //the url of the random quote api
+        const api_url = "https://api.quotable.io/random";
+
+
+
+        //getting quote url 
+        async function getquote(url){
+            //fetch url
+            const response = await fetch(url);
+            //get response
+            var data = await response.json();
+            //display url data in console
+            console.log(data);
+            //setting quote variable to the 'content' section of the inner HTML in console
+            //to see where this is being pulled from;
+            //inspect website -> console -> open 'object' 
+            quote.innerHTML = data.content
+            //setting author variable to the 'author' section of the inner HTML in console
+            //to see where this is being pulled from go to;
+            //inspect website -> console -> open 'object'  
+            author.innerHTML = data.author
+        }
+
+        //this function is used to get the randomly generated quote from the above function
+        getquote(api_url);
+
     </script>
     
 </body>
