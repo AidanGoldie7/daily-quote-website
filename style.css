@@ -46,7 +46,7 @@ body{
     transform: translateX(-50%);
 }
 
-
+/*quote text size*/
 .quote-box blockquote{
     font-size: 26px;
     min-height: 110px;
@@ -55,4 +55,51 @@ body{
 /*add quotation marks before and after the quote*/
 .quote-box blockquote::before, .quote-box blockquote::after{
     content: '"';
+}
+
+/*author text*/
+.quote-box span {
+    display: block;
+    margin-top: 10px;
+    float: right;
+    position: relative;
+}
+
+/*line before author name*/
+.quote-box span::before{
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: rgb(23,124,229);
+    position: absolute;
+    top: 50%;
+    left: -30px;
+}
+
+
+.quote-box div{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.quote-box button{
+    background: rgb(23, 124, 229);
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid rgb(23, 124, 229);
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/*the second button*/
+.quote-box button:nth-child(2){
+    background: transparent;
+    color: #333;
 }
